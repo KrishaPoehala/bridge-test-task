@@ -15,7 +15,6 @@ public class ExceptionMiddleware : IMiddleware
 		}
 		catch (Exception ex)
 		{
-
             var response = context.Response;
             response.StatusCode = ex switch
             {

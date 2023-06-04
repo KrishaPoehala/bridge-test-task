@@ -23,7 +23,6 @@ public static class ConfigureServices
 
         self.AddOptions<RateLimiterOptions>().BindConfiguration(nameof(RateLimiterOptions));
 
-
         return self;
     }
 }

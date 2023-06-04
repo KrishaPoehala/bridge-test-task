@@ -24,7 +24,6 @@ public class DogsContextInitializer
             new Dog {Id=Guid.NewGuid().ToString(), Name = "Jessy", Color = "black & white", TailLength = 7, Weight = 14 },
             new Dog {Id=Guid.NewGuid().ToString(), Name = "Max", Color = "brown", TailLength = 15, Weight = 18 },
             new Dog {Id=Guid.NewGuid().ToString(), Name = "Bella", Color = "white", TailLength = 10, Weight = 25 },
-            // Add more dogs as needed
         };
 
         _context.Dogs.AddRange(dogs);

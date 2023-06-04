@@ -41,7 +41,7 @@ public class DogRepository : IDogRepository
 
     private static IQueryable<Dog> OrderIfAttributeExists(GetDogsContext context, IQueryable<Dog> query)
     {
-        if (string.IsNullOrEmpty(context.Attribute))
+        if (string.IsNullOrWhiteSpace(context.Attribute))
         {
             return query;
         }
