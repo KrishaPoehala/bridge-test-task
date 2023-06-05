@@ -26,7 +26,7 @@ public class GetAllDogsQueryHandler : IRequestHandler<GetAllDogsQuery, IEnumerab
     {
         var context = _mapper.Map<GetDogsContext>(request);
         var dogs = await _dogsRepository.GetDogsAsync(context, cancellationToken);
-        var result = _mapper.Map<IEnumerable<DogDto>>(dogs.AsEnumerable()).ToList();
+        var result = _mapper.Map<IEnumerable<DogDto>>(dogs.AsEnumerable());
         return result;
     }
 }
