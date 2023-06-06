@@ -23,6 +23,8 @@ public static class ConfigureServices
 
         self.AddOptions<RateLimiterOptions>().BindConfiguration(nameof(RateLimiterOptions));
 
+        self.AddOptions<PingMessageOptions>().BindConfiguration(nameof(PingMessageOptions));
+
         return self;
     }
 }

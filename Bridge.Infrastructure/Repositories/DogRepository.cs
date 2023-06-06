@@ -55,9 +55,14 @@ public class DogRepository : IDogRepository
         return query.OrderBy(orderExpression);
     }
 
+    private const string DEFAULT_ORDER = "desc";
+    private const string DESCENDING_ORDER = "descending";
+    private const string ASCENDING_ORDER = "ascending";
+
     private static string GetOrder(GetDogsContext context)
     {
-        return context.Order?.ToLower() == "desc" ? "descending" : "ascending";
+        return context.Order?.ToLower() == DEFAULT_ORDER  ? 
+            DESCENDING_ORDER : ASCENDING_ORDER;
     }
 
     public async Task<bool> IsNameUnique(string name, CancellationToken cancellationToken = default)
